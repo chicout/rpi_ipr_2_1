@@ -64,7 +64,7 @@ class ListView {
     }
 
     #addEventListeners() {
-		this.#elements.search.addEventListener('keypress', (e) => {  if (e.key === 'Enter') this.#onSearchChange()} );
+        this.#elements.search.addEventListener('keypress', event => {  if (event.key === 'Enter') this.#onSearchChange()} );
         this.#elements.searchBtn.addEventListener('click', () => this.#onSearchChange());
         this.#elements.filter.addEventListener('change', this.handlers.onFilterChange);
         this.#elements.moreBtn.addEventListener('click', this.handlers.onMoreBtnClick);
