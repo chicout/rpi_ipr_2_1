@@ -1,0 +1,37 @@
+{
+  "name": "lab04",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --progress",
+    "lint": ".\\node_modules\\.bin\\eslint src/app/**/*.mjs",
+    "build-dev": "npm run lint && webpack --config config/webpack.dev.js --progress",
+    "build-prod": "npm run lint && webpack --config config/webpack.prod.js --progress",
+    "deploy": "npm run build-prod && gh-pages -d dist"
+  },
+  "author": "Pavel Shytsikau",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.17.9",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^0.28.10",
+    "eslint": "^8.15.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "gh-pages": "^4.0.0",
+    "html-webpack-plugin": "^4.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^0.20.3",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0",
+    "webpack-merge": "^5.8.0"
+  }
+}
